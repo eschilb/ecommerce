@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="fragments :: head"></head>
+	<body>
+		<div th:replace="fragments :: navbar" ></div>
+		<div class="container">
+			<h1>Add a Product to your Product Repository</h1>
+	 		<form action="#" th:action="@{/newProduct}" th:object="${product}" method="post">
+	 		
+		 		<div class="form-group">
+		 			<input type="text" class="form-control" placeholder="Enter Quantity" th:field="*{quantity}" />
+		 		</div>
+		 		
+		 		<div class="form-group">
+		 			<input type="text" class="form-control" placeholder="Enter Price" th:field="*{price}" />
+		 		</div>
+		 		
+		 		<div class="form-group">
+		 			<input type="text" class ="form-control" placeholder="Product Description" th:field="*{description}" />
+		 		</div>
+		 		
+		 		<div class="form-group">
+		 			<input type="text" class ="form-control" placeholder="Product Name" th:field="*{name}" />
+		 		</div>
+			 	<div class="form-group">
+		 			<input type="text" class ="form-control" placeholder="Product Brand" th:field="*{brand}" />
+		 		</div>
+			 	<div class="form-group">
+		 			<input type="text" class ="form-control" placeholder="Product Category" th:field="*{category}" />
+		 		</div>
+		 		<div class="form-group">
+		 			<input type="text" class ="form-control" placeholder="Product Image File Path" th:field="*{image}" />
+		 		</div>
+		 		
+	 			<button class="btn btn-primary">Add New Product</button>
+			</form>
+		</div>
+		
+		    <footer th:replace="fragments :: footer"></footer>
+</body>
+</html>
